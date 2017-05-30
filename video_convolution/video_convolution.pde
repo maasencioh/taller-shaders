@@ -38,34 +38,42 @@ float[] changeConv(int current) {
   switch(current) {
     case 0:
       float[] identity = {
-        0, 0, 0,
-        0, 8, 0,
-        0, 0, 0
+        0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0,
+        0, 0, 8, 0, 0,
+        0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0
       };
       return identity;
     case 1:
       float[] sharpen = {
-         0, -1, 0,
-        -1,  5, -1,
-         0, -1,  0
+        0,  0,  0,  0, 0,
+        0,  0, -1,  0, 0,
+        0, -1,  5, -1, 0,
+        0,  0, -1,  0, 0,
+        0,  0,  0,  0, 0
       };
       return sharpen;
     case 2:
       float[] edge = {
-        -1, -1, -1,
-        -1,  8, -1,
-        -1, -1, -1
+        0,  0,  0,  0, 0,
+        0, -1, -1, -1, 0,
+        0, -1,  8, -1, 0,
+        0, -1, -1, -1, 0,
+        0,  0,  0,  0, 0,
       };
       return edge;
     case 3:
       float const9 = 1.0/9.0;
       float[] blur = {
-        const9, const9, const9,
-        const9, const9, const9,
-        const9, const9, const9
+        0,      0,      0,      0, 0,
+        0, const9, const9, const9, 0,
+        0, const9, const9, const9, 0,
+        0, const9, const9, const9, 0,
+        0,      0,      0,      0, 0,
       };
       return blur;
     default :
-      return new float[9];
+      return new float[25];
   }
 }
