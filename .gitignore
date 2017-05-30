@@ -5,3 +5,16 @@ application.linux64
 application.windows32
 application.windows64
 application.macosx
+.idea/
+*.iml
+*.iws
+*.eml
+out/
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+css/reveal.min.css
+js/reveal.min.js
+lib/
